@@ -1,0 +1,67 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook App</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Notebook</h1>
+        <button onclick="showNoteForm()">Add New Note</button>
+    </header>
+
+
+    <main>
+
+        <!-- Search Box -->
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search notes..."
+            onkeyup="searchNotes()"
+        >
+
+
+        <!-- Note Form -->
+        <div id="noteForm">
+
+            <h2 id="formTitle">Create Note</h2>
+
+            <input
+                type="text"
+                id="noteTitle"
+                placeholder="Enter note title"
+            >
+
+            <textarea
+                id="noteContent"
+                placeholder="Write your note here..."
+            ></textarea>
+
+            <button onclick="saveNote()">Save Note</button>
+            <button onclick="hideNoteForm()">Cancel</button>
+
+        </div>
+
+
+        <!-- Notes Section -->
+        <div class="notes-header">
+            <h2>My Notes</h2>
+            <p id="noteCount">0 Notes</p>
+        </div>
+
+        <div id="notesContainer"></div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
